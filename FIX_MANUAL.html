@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H??NG D?N FIX ENCODING TI?NG VI?T</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #4361ee;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 4px solid #4361ee;
+            padding-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 30px 0 15px 0;
+        }
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid #4361ee;
+            border-radius: 5px;
+        }
+        .step h3 {
+            color: #4361ee;
+            margin-bottom: 10px;
+        }
+        code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            display: block;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+        }
+        .alert {
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .alert-danger {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            color: #721c24;
+        }
+        .alert-success {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            color: #155724;
+        }
+        .alert-info {
+            background: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            color: #0c5460;
+        }
+        .example {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 5px solid #ffc107;
+        }
+        ul, ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        strong {
+            color: #4361ee;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 10px 5px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        .text-center {
+            text-align: center;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>??? H??NG D?N FIX L?I TI?NG VI?T</h1>
+
+        <div class="alert alert-danger">
+            <strong>?? V?N ??:</strong> T?t c? ch? ti?ng Vi?t c? d?u hi?n th? th?nh d?u <strong>?</strong>
+        </div>
+
+        <div class="alert alert-info">
+            <strong>? GI?I PH?P:</strong> M? file PHP b?ng VS Code v? G? L?I text ti?ng Vi?t b?ng TAY
+        </div>
+
+        <h2>?? C?CH FIX NHANH NH?T (10 ph?t)</h2>
+
+        <div class="step">
+            <h3>B??c 1??: T?i VS Code (n?u ch?a c?)</h3>
+            <p>Truy c?p: <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></p>
+            <p>Download v? c?i ??t (mi?n ph?)</p>
+        </div>
+
+        <div class="step">
+            <h3>B??c 2??: M? th? m?c workspace</h3>
+            <ol>
+                <li>M? VS Code</li>
+                <li>File ? Open Folder</li>
+                <li>Ch?n th? m?c: <code style="display:inline; padding:5px;">C:\xampp\htdocs\workspace</code></li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3>B??c 3??: Fix file config/vietnamese_text.php (QUAN TR?NG NH?T)</h3>
+            <ol>
+                <li>M? file: <code style="display:inline; padding:5px;">config/vietnamese_text.php</code></li>
+                <li>T?m c?c d?ng c? text kh?ng d?u (v? d?: <code style="display:inline; padding:5px;">'login' => 'Dang nhap'</code>)</li>
+                <li>G? L?I B?NG TAY text c? d?u: <code style="display:inline; padding:5px;">'login' => '??ng nh?p'</code></li>
+                <li>L?m t??ng t? cho T?T C? c?c d?ng</li>
+            </ol>
+            
+            <div class="example">
+                <strong>V? d?:</strong><br>
+                <strong>TR??C:</strong> 'home' => 'Trang chu',<br>
+                <strong>SAU:</strong> 'home' => 'Trang ch?',  <em>(G? l?i "ch?" c? d?u)</em>
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>B??c 4??: Fix c?c file PHP ch?nh</h3>
+            <p><strong>File c?n fix theo th? t? ?u ti?n:</strong></p>
+            <ol>
+                <li><code style="display:inline; padding:5px;">index.php</code> - Trang ch?</li>
+                <li><code style="display:inline; padding:5px;">login.php</code> - ??ng nh?p</li>
+                <li><code style="display:inline; padding:5px;">register.php</code> - ??ng k?</li>
+                <li><code style="display:inline; padding:5px;">student/dashboard.php</code> - Dashboard h?c sinh</li>
+                <li><code style="display:inline; padding:5px;">teacher/dashboard.php</code> - Dashboard gi?o vi?n</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3>B??c 5??: C?ch t?m v? thay th? nhanh</h3>
+            <ol>
+                <li>Trong VS Code, nh?n <strong>Ctrl+H</strong></li>
+                <li>? "Find": g? text l?i (v? d?: <code style="display:inline; padding:5px;">??ng nh?p</code>)</li>
+                <li>? "Replace": g? text ??ng (v? d?: <code style="display:inline; padding:5px;">??ng nh?p</code>)</li>
+                <li>Click <strong>"Replace All"</strong></li>
+            </ol>
+        </div>
+
+        <h2>?? DANH S?CH TEXT C?N THAY TH?</h2>
+
+        <div class="step">
+            <p><strong>Copy v? paste v?o Find & Replace (Ctrl+H):</strong></p>
+            
+            <table style="width:100%; border-collapse: collapse; margin-top: 15px;">
+                <tr style="background:#f0f0f0;">
+                    <th style="padding:10px; border:1px solid #ddd;">T?M (Find)</th>
+                    <th style="padding:10px; border:1px solid #ddd;">THAY B?NG (Replace)</th>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">Trang ch?</code></td>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">Trang ch?</code></td>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">??ng nh?p</code></td>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">??ng nh?p</code></td>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">??ng k?</code></td>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">??ng k?</code></td>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">H?c sinh</code></td>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">H?c sinh</code></td>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">Gi?o vi?n</code></td>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">Gi?o vi?n</code></td>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">Kh?a h?c</code></td>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">Kh?a h?c</code></td>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">B?i gi?ng</code></td>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">B?i gi?ng</code></td>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">Ti?n ??</code></td>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">Ti?n ??</code></td>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">Tin nh?n</code></td>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">Tin nh?n</code></td>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">H? s?</code></td>
+                    <td style="padding:8px; border:1px solid #ddd;"><code style="display:inline;">H? s?</code></td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>?? L?U ? QUAN TR?NG</h2>
+
+        <div class="alert alert-success">
+            <strong>? SAU KHI THAY TH?:</strong>
+            <ol>
+                <li>Save file: <strong>Ctrl+S</strong></li>
+                <li>Check encoding ? g?c d??i b?n ph?i VS Code ph?i l?: <strong>UTF-8</strong></li>
+                <li>Clear browser cache: <strong>Ctrl+Shift+Del</strong></li>
+                <li>Hard refresh: <strong>Ctrl+F5</strong></li>
+            </ol>
+        </div>
+
+        <div class="alert alert-info">
+            <strong>?? M?O:</strong> Thay v? thay t?ng file, b?n c? th?:
+            <ol>
+                <li>Nh?n <strong>Ctrl+Shift+H</strong> (Find in Files)</li>
+                <li>Thay th? c?ng l?c T?T C? file PHP!</li>
+                <li>Files to include: <code style="display:inline; padding:5px;">*.php</code></li>
+            </ol>
+        </div>
+
+        <h2>?? KI?M TRA SAU KHI FIX</h2>
+
+        <div class="step">
+            <ol>
+                <li>M? browser</li>
+                <li>Truy c?p: <code style="display:inline; padding:5px;">http://localhost/workspace</code></li>
+                <li>N?u v?n th?y d?u <strong>?</strong>, nh?n <strong>Ctrl+Shift+R</strong> (hard refresh)</li>
+                <li>Check c?c trang: Login, Register, Dashboard</li>
+            </ol>
+        </div>
+
+        <div class="text-center">
+            <a href="http://localhost/workspace" class="btn">?? V? Trang Ch?</a>
+            <a href="http://localhost/workspace/test_vietnamese.php" class="btn">?? Test Encoding</a>
+        </div>
+
+        <hr style="margin: 40px 0; border: none; border-top: 2px solid #ddd;">
+
+        <h2>? C?U H?I TH??NG G?P</h2>
+
+        <div class="step">
+            <h3>Q: T?i sao kh?ng d?ng script t? ??ng?</h3>
+            <p><strong>A:</strong> V? encoding ?? b? l?i t? khi file ???c t?o. Script kh?ng th? "?o?n" ???c k? t? g?c. Ph?i g? l?i b?ng tay m?i ??ng 100%.</p>
+        </div>
+
+        <div class="step">
+            <h3>Q: Ph?i fix bao nhi?u file?</h3>
+            <p><strong>A:</strong> Kho?ng 20-25 file PHP. Nh?ng c? th? d?ng Find & Replace All ?? fix nhanh!</p>
+        </div>
+
+        <div class="step">
+            <h3>Q: M?t bao l?u?</h3>
+            <p><strong>A:</strong> 
+                <ul>
+                    <li>C?ch th? c?ng: 30-60 ph?t</li>
+                    <li>D?ng Find & Replace All: 10-15 ph?t</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="step">
+            <h3>Q: Database c? c?n fix kh?ng?</h3>
+            <p><strong>A:</strong> KH?NG! Database ?? ??ng UTF-8. Ch? c?n fix file PHP th?i.</p>
+        </div>
+
+        <div class="text-center" style="margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+            <h3 style="color: #4361ee;">?? Ch?c b?n fix th?nh c?ng!</h3>
+            <p>N?u v?n g?p v?n ??, h?y xem file <strong>QUICK_FIX.md</strong> ho?c <strong>ENCODING_FIX.md</strong></p>
+        </div>
+    </div>
+</body>
+</html>
