@@ -68,37 +68,7 @@ $page_title = 'Dashboard - H?c sinh';
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <div class="col-md-2 p-0 sidebar">
-                <div class="nav flex-column">
-                    <a class="nav-link active" href="dashboard.php">
-                        <i class="fas fa-home"></i> Trang ch?
-                    </a>
-                    <a class="nav-link" href="courses.php">
-                        <i class="fas fa-book"></i> Kh?a h?c c?a t?i
-                    </a>
-                    <a class="nav-link" href="browse.php">
-                        <i class="fas fa-search"></i> T?m kh?a h?c
-                    </a>
-                    <a class="nav-link" href="quizzes.php">
-                        <i class="fas fa-clipboard-check"></i> B?i ki?m tra
-                    </a>
-                    <a class="nav-link" href="assignments.php">
-                        <i class="fas fa-tasks"></i> B?i t?p
-                    </a>
-                    <a class="nav-link" href="messages.php">
-                        <i class="fas fa-envelope"></i> Tin nh?n
-                        <?php if ($unread_count > 0): ?>
-                            <span class="badge bg-danger"><?php echo $unread_count; ?></span>
-                        <?php endif; ?>
-                    </a>
-                    <a class="nav-link" href="progress.php">
-                        <i class="fas fa-chart-line"></i> Ti?n ?? h?c t?p
-                    </a>
-                    <a class="nav-link" href="profile.php">
-                        <i class="fas fa-user"></i> H? s?
-                    </a>
-                </div>
-            </div>
+            <?php include 'sidebar.php'; ?>
 
             <!-- Main Content -->
             <div class="col-md-10 main-content">
